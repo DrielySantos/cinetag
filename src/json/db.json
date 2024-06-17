@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "titulo": "Alguma coisa aqui",
+        "capa": "https://...",
+        "link": "https://..."
+    },
+    {
+        "id": 2,
+        "titulo": "Alguma coisa aqui",
+        "capa": "https://...",
+        "link": "https://..."
+    },
+    {
+        "id": 3,
+        "titulo": "Alguma coisa aqui",
+        "capa": "https://...",
+        "link": "https://..."
+    },
+    {
+        "id": 4,
+        "titulo": "Alguma coisa aqui",
+        "capa": "https://...",
+        "link": "https://..."
+    },
+    {
+        "id": 5,
+        "titulo": "Alguma coisa aqui",
+        "capa": "https://...",
+        "link": "https://..."
+    },
+    {
+        "id": 6,
+        "titulo": "Alguma coisa aqui",
+        "capa": "https://...",
+        "link": "https://..."
+    },
+    {
+        "id": 7,
+        "titulo": "Alguma coisa aqui",
+        "capa": "https://...",
+        "link": "https://..."
+    }
+]
