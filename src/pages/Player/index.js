@@ -1,18 +1,26 @@
-import Banner from "components/Banner";
-import styles from "./Player.module.css";
-import Titulo from "components/Titulo";
-import videos from "../../json/db.json";
-import { useParams } from "react-router-dom";
-import NaoEncontrada from "pages/NaoEncontrada";
+import Banner from 'components/Banner';
+import Titulo from 'components/Titulo';
+import { useParams } from 'react-router-dom';
+import styles from './Player.module.css';
+import NaoEncontrada from 'pages/NaoEncontrada';
+import { useEffect, useState } from 'react';
 
 function Player() {
+  const [video, setVideo] = useState();
   const parametros = useParams();
-  const video = videos.find((video) => {
-    return video.id === Number(parametros.id);
-  });
 
-  if(!video){
-    return <NaoEncontrada/>
+  useEffect(() => {
+    if (!video) {
+      fetch(`https://my-json-server.typicode.com/DrielySantos/cinetag-api/videos?id=${parametros.id}`)
+        .then(resposta => resposta.json())
+        .then(dados => {
+          setVideo(...dados)
+        })
+    }
+  }, [parametros.id, video])
+
+  if (!video) {
+    return <NaoEncontrada />
   }
 
   return (
@@ -23,18 +31,15 @@ function Player() {
       </Titulo>
       <section className={styles.container}>
         <iframe
-            width="100%"
-            height="100%"
-            src={video.link}
-            title={video.titulo}
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-        ></iframe>
-
+          width="100%"
+          height="100%"
+          src={video.link}
+          title={video.titulo}
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </section>
     </>
-  );
+  )
 }
 
 export default Player;
