@@ -1,7 +1,12 @@
 .link{
     color: var(--branco);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 700;
     padding: 1em;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.link:hover{
+    color: var(--hover);
 }

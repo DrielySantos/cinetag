@@ -2,4 +2,12 @@
     font-size: 32px;
     font-weight: 500;
     text-align: center;
+    margin: 0;
+    padding: 50px 0;
+    color: var(--branco);
+    background-color: var(--container);
+}
+
+.container{
+    background-color: var(--container);
 }

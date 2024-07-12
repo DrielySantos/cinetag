@@ -5,15 +5,18 @@
     padding: 0 0 1em 0;
     margin-top: .5em;
     width: 202px;
-    background-color: var(--cinza);
+    background-color: #90a7e3;
+    border-radius: 9px;
 }
 
 .capa{
     width: 100%;
+    border-radius: 9px 9px 0 0;
 }
 
 .container h2, .favoritar{
     padding: 0 1em;
+    cursor: pointer;
 }
 
 .favoritar{

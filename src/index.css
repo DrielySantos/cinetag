@@ -3,12 +3,14 @@
   --branco: #FFFFFF;
   --preto: #000000;
   --cinza: #E2E2E2E2;
+  --hover: #1553be;
+  --container: rgb(34, 33, 33);
 }
 
 body {
   margin: 0;
   font-family: var(--fonte);
-  background-color: var(--branco);
+  background-color: var(--container);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
